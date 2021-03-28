@@ -31,10 +31,12 @@ func GetPattern(pattern string, verbose bool, threads int, difficulty bool) {
 	}
 
 	r := <-done
+
+	fmt.Println("Address found!")
 	if difficulty {
-		fmt.Println("Difficulty :", count)
+		fmt.Println("Difficulty:", count)
 	}
-	fmt.Println(r.address, "\n"+r.privatekey)
+	fmt.Println("Address:", r.address, "\nPrivate Key:", r.privatekey)
 
 }
 
