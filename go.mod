@@ -1,4 +1,4 @@
-module btc-address
+module vanity-btc
 
 go 1.16
 

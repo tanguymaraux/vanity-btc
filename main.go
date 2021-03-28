@@ -1,10 +1,10 @@
 package main
 
 import (
-	"btc-address/cmd"
 	"bytes"
 	"crypto/sha256"
 	"fmt"
+	"vanity-btc/cmd"
 
 	"github.com/btcsuite/btcutil/base58"
 

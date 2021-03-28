@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"btc-address/addresses"
 	"fmt"
 	"os"
 	"time"
+	"vanity-btc/addresses"
 
 	"github.com/spf13/cobra"
 )
@@ -16,9 +16,9 @@ var difficulty bool
 var chronometer bool
 
 var rootCmd = &cobra.Command{
-	Use:   "btc-address",
-	Short: "btc-address is a personnaly bitcoin address generator",
-	Long:  "btc-address is a personnaly bitcoin address generator.\n\nIt is based on this method : https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addressses",
+	Use:   "vanity-btc",
+	Short: "vanity-btc is a personnaly bitcoin address generator",
+	Long:  "vanity-btc is a personnaly bitcoin address generator.\n\nIt is based on this method : https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addressses",
 	Run: func(cmd *cobra.Command, args []string) {
 		if addresses.CheckPattern(pattern) {
 			start := time.Now()
@@ -26,7 +26,7 @@ var rootCmd = &cobra.Command{
 			addresses.GetPattern(pattern, verbose, threads, difficulty)
 			if chronometer {
 				duration := time.Since(start)
-				fmt.Println(duration)
+				fmt.Println("Execution:", duration)
 			}
 		} else {
 			fmt.Println("Pattern not valid! It must not contains any '0', 'O', 'l', 'I'")

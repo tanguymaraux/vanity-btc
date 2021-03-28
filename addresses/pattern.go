@@ -23,7 +23,7 @@ type result struct {
 
 func GetPattern(pattern string, verbose bool, threads int, difficulty bool) {
 	if !verbose {
-		fmt.Println("Generating address...")
+		fmt.Println("Generating address...\n")
 	}
 
 	for i := 0; i < threads; i++ {

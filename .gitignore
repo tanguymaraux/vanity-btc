@@ -4,7 +4,7 @@
 *.dll
 *.so
 *.dylib
-btc-address
+vanity-btc
 
 # Test binary, built with `go test -c`
 *.test
