@@ -25,7 +25,7 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   "vanity-btc",
 	Short: "vanity-btc is a bitcoin vanity address generator",
-	Long:  "vanity-btc is a bitcoin vanity address generator.\n\nIt is based on this method : https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addressses",
+	Long:  "vanity-btc is a bitcoin vanity address generator.\n\nIt is based on this method : https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addressses\nVanity-btc version 1.0",
 	Run: func(cmd *cobra.Command, args []string) {
 		// launch the program if the pattern is valid
 		if addresses.CheckPattern(pattern) {

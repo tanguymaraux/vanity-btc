@@ -51,7 +51,7 @@ func initlogger(verbose bool) {
 func GetAddress(pattern string, verbose bool, threads int, number bool) {
 	// Init the logger
 	initlogger(verbose)
-	zap.S().Info("Generating address...")
+	zap.S().Info("Generating address with patern: \"", pattern, "\"...")
 
 	// Loop for multithreading the address's generating
 	for i := 0; i < threads; i++ {
@@ -67,11 +67,11 @@ func GetAddress(pattern string, verbose bool, threads int, number bool) {
 
 	// Print the number of addresses generated
 	if number {
-		zap.S().Info("Number of address generated:", count)
+		zap.S().Info("Number of address generated: ", count)
 	}
 
 	// Print the bitcoin vanity address and the private key related
-	zap.S().Info("\nAddress:", r.address, "\nPrivate Key:", r.privatekey)
+	zap.S().Info("\nAddress: ", r.address, "\nPrivate Key: ", r.privatekey)
 
 }
 
