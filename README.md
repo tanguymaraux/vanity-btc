@@ -55,7 +55,7 @@ Add the 4 bytes at the end of extended RIPEMD-160 hash<br>
 
 ## Example
 ```
-$ ./vanity-btc -c -n -p "BTC" -t 12
+$ ./vanity-btc --chronometer --number --pattern "BTC" --threads 12
 2021-03-29T10:50:21.729+0100	INFO	addresses/pattern.go:54	Generating address with patern: "BTC"...
 2021-03-29T10:50:22.259+0100	INFO	addresses/pattern.go:66	Address found!
 2021-03-29T10:50:22.259+0100	INFO	addresses/pattern.go:70	Number of address generated: 45167
@@ -66,7 +66,9 @@ Execution: 528.387659ms
 ```
 
 ## Docker
-
+```
+docker run -it --rm pilpur/vanity-btc --chronometer --number --pattern "BTC" --threads 12
+```
 
 ## License
 This software is licensed under [MIT license.](LICENSE)<br>
